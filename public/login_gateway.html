@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Gateway</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <img src="./logo_nobg.png" class="nav-logo" alt="Logo">
+        <img src="./menu.png" class="menu-logo" alt="Menu" onclick="menu()">
+    </nav>
+
+    <div class="menu" id="menu">
+        <a href="index.html">
+            <div class="side-nav-items">Home</div>
+        </a>
+        <a href="#about">
+            <div class="side-nav-items">About Us</div>
+        </a>
+        <a href="#clients">
+            <div class="side-nav-items">Our Clients</div>
+        </a>
+        <a href="#footer">
+            <div class="side-nav-items">Brand</div>
+        </a>
+        <a href="#contacts">
+            <div class="side-nav-items">Contacts</div>
+        </a>
+    </div>
+
+    <div class="login-gateway-page">
+        <form id="roleForm" class="login-gateway-form" onsubmit="return handleFormSubmit(event)">
+            <label for="role">Choose your role:</label> <!-- Removed extra space in 'for' attribute -->
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select</option>
+                <option value="auto_driver">Auto Driver</option>
+                <option value="rider">Rider</option>
+            </select>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

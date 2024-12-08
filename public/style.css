@@ -1,0 +1,830 @@
+:root {
+    --background: #ffffff;
+    --text: #000000;
+    --border: #d6d6d6;
+
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    transition: all ease 0.3s;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 9vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-logo {
+    height: 5vh;
+    margin-right: 2vw;
+}
+
+.menu-logo:active {
+    transform: scale(85%);
+}
+
+.nav-logo {
+    height: 7vh;
+    margin-left: 2vw;
+
+}
+
+.home {
+    padding-top: 10vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 0px;
+    align-items: center;
+    text-align: start;
+}
+
+.home-left {
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img {
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.main-text {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.home-btn {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.mid-line-text {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    width: 80%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.info {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-token {
+    background: linear-gradient(180deg, rgba(253, 171, 50, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    margin: 5%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.info-token-main {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.info-token-heading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.info-token-detail {
+    font-size: 16px;
+}
+
+
+.map {
+    padding-top: 10vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    gap: 20%;
+}
+
+.map-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.map-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-right {
+    position: relative;
+}
+
+.map-img {
+    width: 100%;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.map-pin-img {
+    position: absolute;
+    top: 36%;
+    left: 48%;
+    width: 45px;
+    height: auto;
+    transform: translate(-50%, -100%);
+    animation: pop 2s ease-in-out infinite;
+}
+
+/* Keyframes for up and down movement effect */
+@keyframes pop {
+
+    0%,
+    100% {
+        transform: translate(-50%, -100%);
+        /* Original position */
+    }
+
+    50% {
+        transform: translate(-50%, -120%);
+        /* Move up */
+    }
+}
+
+.map-btn {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.test {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5vh;
+    gap: 5%;
+}
+
+.test-token {
+    background-image: linear-gradient(125deg, #fbab34, #ffffff);
+
+    border-radius: 15px;
+    padding: 20px 20px;
+}
+
+.test-token-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.test-token-top-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.test-token-top-right p {
+    margin: 0px;
+    font-weight: 500;
+}
+
+.test-token-bottom p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 300;
+}
+
+.test-token-top-left {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.test-token-top-left-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.route-img {
+    width: 100%;
+}
+
+.auto-img {
+    position: absolute;
+    width: 10%;
+    bottom: 1%;
+    left: 20%;
+    transform: translateX(0%);
+}
+
+
+footer {
+    background-color: #ffbd59;
+    color: var(--text);
+    width: 100%;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.footer-main-text {
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    filter: brightness(80%);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    width: 0;
+    top: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.menu.show {
+    width: 20%;
+    opacity: 1;
+    z-index: 10;
+    background-color: var(--background);
+    color: white;
+    border-left: 1px solid var(--border);
+}
+
+
+.side-nav-items {
+    width: 200%;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 0px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text);
+}
+
+.side-nav-items-vip {
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    border: 1px solid black;
+    border-radius: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Login-Gateway CSS */
+
+
+.login-gateway-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-gateway-form {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.login-gateway-form label {
+    font-size: 20px;
+    align-self: flex-start;
+    font-weight: 500;
+}
+
+.login-gateway-form select {
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: var(--background);
+}
+
+.login-gateway-form select:focus {
+    outline: none;
+}
+
+
+.login-gateway-form button {
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--text);
+    color: #d6d6d6;
+    border-radius: 5px;
+    border: 0px;
+}
+
+
+
+
+/* Login-Auto-Driver CSS */
+
+
+.login-auto-driver-page {
+    padding-top: 8vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-auto-driver-form {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 10px;
+    padding: 20px 10px;
+
+}
+
+.login-auto-driver-form label {
+    font-size: 14px;
+    align-self: flex-start;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.login-auto-driver-form select {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: grey;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: var(--background);
+}
+
+.login-auto-driver-form select:focus {
+    outline: none;
+    color: var(--text)
+}
+
+
+.login-auto-driver-form button {
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--text);
+    color: #d6d6d6;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.login-auto-driver-form input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+.login-auto-driver-form h2 {
+    margin: 0px 0px;
+    align-self: start;
+}
+
+
+/* Login-Rider CSS */
+
+
+.login-rider-page {
+    padding-top: 8vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-rider-form {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 10px;
+    padding: 20px 10px;
+
+}
+
+.login-rider-form label {
+    font-size: 14px;
+    align-self: flex-start;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.login-rider-form select {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: grey;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: var(--background);
+}
+
+.login-rider-form select:focus {
+    outline: none;
+    color: var(--text)
+}
+
+.login-rider-form button {
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--text);
+    color: #d6d6d6;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.register-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+
+.login-rider-form input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    padding: 10px;
+}
+
+.login-rider-form h2 {
+    margin: 0px 0px;
+    align-self: start;
+}
+
+
+/* Dashboard CSS */
+
+.dashboard-page {
+    padding-top: 8vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-form-main {
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+    border-radius: 10px;
+    gap: 2%;
+    flex-wrap: wrap;
+    max-height: 90vh;
+}
+
+
+.dashboard-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 10px;
+    gap: 2%;
+    padding: 15px 15px;
+}
+
+.dashboard-form label {
+    font-size: 14px;
+    align-self: flex-start;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.dashboard-form select {
+    width: 23%;
+    height: 30px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: var(--background);
+}
+
+.dashboard-form select:focus {
+    outline: none;
+    color: var(--text)
+}
+
+.dashboard-form button {
+    width: 25%;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--text);
+    color: #d6d6d6;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.register-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+
+.dashboard-form input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    padding: 10px;
+}
+
+.dashboard-form h2 {
+    margin: 0px 0px;
+    align-self: start;
+}
+
+button:active {
+    transform: scale(98%);
+}
+
+.hr {
+    height: 2px;
+    background-color: #000000;
+    width: 80vw;
+    display: flex;
+}
+
+ul {
+    padding: 10px 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 60vh;
+    scroll-margin-top: 0;
+    list-style-type: none;
+}
+
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 10px;
+    scroll-snap-align: start;
+}
+
+
+@media (max-width: 768px) {
+
+    .home,
+    .info,
+    .map,
+    .test {
+        flex-direction: column;
+    }
+
+    .test-token {
+        margin-bottom: 10%;
+    }
+
+    .main-text {
+        margin-right: 0vh;
+        margin-bottom: 7vh;
+    }
+
+    .mid-line-text {
+        font-size: 40px;
+    }
+
+    .menu.show {
+        width: 100%;
+        display: flex;
+        text-align: center;
+
+    }
+
+    .login-gateway-form,
+    .login-auto-driver-form,
+    .login-rider-form,
+    .register-bt,
+    .dashboard-form {
+        width: 80%;
+    }
+
+    .dashboard-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dashboard-form select {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dashboard-form button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dashboard-form-main {
+        width: 80%;
+    }
+}
+

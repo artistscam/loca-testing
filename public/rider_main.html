@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+
+    <nav class="top-nav">
+        <img src="./logo_nobg.png" class="nav-logo">
+        <img src="./menu.png" class="menu-logo" onclick="menu()">
+    </nav>
+
+
+    <div class="menu" id="menu" onclick="menu()">
+        <a href="index.html">
+            <div class="side-nav-items">Home</div>
+        </a>
+        <a href="#footer">
+            <div class="side-nav-items">About Us</div>
+        </a>
+        <a href="#clients">
+            <div class="side-nav-items">Our Clients</div>
+        </a>
+        <a href="#footer">
+            <div class="side-nav-items">Brand</div>
+        </a>
+        <a href="#contacts"></a>
+        <div class="side-nav-items">Contacts</div>
+        </a>
+        <a href="/logout">
+            <div class="side-nav-items-vip" >Logout</div>
+        </a>
+    </div>
+
+    <div class="dashboard-page">
+        <div class="dashboard-form-main">
+            <form id="searchForm" class="dashboard-form">
+                <!-- <h2>Find Auto</h2> -->
+                <select id="from" name="from" required>
+                    <option value="" disabled selected>From</option>
+                    <option value="jhalwa">Jhalwa</option>
+                    <option value="civil_lines">Civil Lines</option>
+                    <option value="dhoomanganj">Dhoomanganj</option>
+                    <option value="station">Station</option>
+                </select>
+
+                <select id="to" name="to" required >
+                    <option value="" disabled selected>To</option>
+                    <option value="jhalwa">Jhalwa</option>
+                    <option value="civil_lines">Civil Lines</option>
+                    <option value="dhoomanganj">Dhoomanganj</option>
+                    <option value="station">Station</option>
+                </select>
+
+                <select id="status" name="status" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="all">All</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+
+            <div class="hr">
+            </div>
+
+            <ul id="results">
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

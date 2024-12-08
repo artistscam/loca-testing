@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Auto Driver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+    <!--Navigation Bar-->
+
+    <nav class="top-nav">
+        <img src="./logo_nobg.png" class="nav-logo">
+        <img src="./menu.png" class="menu-logo" onclick="menu()">
+    </nav>
+
+
+    <div class="menu" id="menu" onclick="menu()">
+        <a href="index.html">
+            <div class="side-nav-items">Home</div>
+        </a>
+        <a href="#about">
+            <div class="side-nav-items">About Us</div>
+        </a>
+        <a href="#clients">
+            <div class="side-nav-items">Our Clients</div>
+        </a>
+        <a href="#footer">
+            <div class="side-nav-items">Brand</div>
+        </a>
+        <a href="#contacts">
+            <div class="side-nav-items">Contacts</div>
+        </a>
+    </div>
+
+    
+    <div class="login-auto-driver-page">
+        <form id="autoOwnerForm" class="login-auto-driver-form" action="/login_auto_driver" method="post">
+            <h2>Auto Owner</h2>
+            <input type="hidden" id="auto_driver_form" name="auto_driver_form_default" value="auto_driver">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your Email">
+
+            <label for="points">From:</label>
+            <select id="points" name="from" required>
+                <option value="" disabled selected>Select your zone</option>
+                <option value="jhalwa">Jhalwa</option>
+                <option value="civil_lines">Civil Lines</option>
+                <option value="dhoomanganj">Dhoomanganj</option>
+                <option value="station">Station</option>
+            </select>
+
+            <label for="points">To:</label>
+            <select id="points" name="to" required >
+                <option value="" disabled selected>Select your zone</option>
+                <option value="jhalwa">Jhalwa</option>
+                <option value="civil_lines">Civil Lines</option>
+                <option value="dhoomanganj">Dhoomanganj</option>
+                <option value="station">Station</option>
+            </select>
+
+            <label for="timing">Timing:</label>
+            <input type="text" id="timing" name="timing" required
+                placeholder="Enter your working hours (e.g., 9 AM - 5 PM)">
+
+            <label for="autoNo">Auto No.:</label>
+            <input type="text" id="autoNo" name="autoNo" required placeholder="Enter your auto number">
+
+            <label for="password">Set Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Create a password">
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
