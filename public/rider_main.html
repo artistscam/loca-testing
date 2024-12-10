@@ -7,6 +7,7 @@
     <title>Rider - Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" href="./auto_logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -36,30 +37,40 @@
         <div class="side-nav-items">Contacts</div>
         </a>
         <a href="/logout">
-            <div class="side-nav-items-vip" >Logout</div>
+            <div class="side-nav-items-vip">Logout</div>
         </a>
     </div>
 
+    <img src="./auto_logo_nobg.png" class="bg-img">
+
     <div class="dashboard-page">
+        <div class="dash-top">
+            <div class="dash-top-left">
+                Dashboard
+            </div>
+            <!-- <div class="dash-top-right"> . </div> -->
+
+        </div>
         <div class="dashboard-form-main">
             <form id="searchForm" class="dashboard-form">
                 <!-- <h2>Find Auto</h2> -->
-                <select id="from" name="from" required>
-                    <option value="" disabled selected>From</option>
-                    <option value="jhalwa">Jhalwa</option>
-                    <option value="civil_lines">Civil Lines</option>
-                    <option value="dhoomanganj">Dhoomanganj</option>
-                    <option value="station">Station</option>
-                </select>
+                <div class="try">
+                    <select id="from" name="from" required>
+                        <option value="" disabled selected>From</option>
+                        <option value="jhalwa">Jhalwa</option>
+                        <option value="civil_lines">Civil Lines</option>
+                        <option value="dhoomanganj">Dhoomanganj</option>
+                        <option value="station">Station</option>
+                    </select>
 
-                <select id="to" name="to" required >
-                    <option value="" disabled selected>To</option>
-                    <option value="jhalwa">Jhalwa</option>
-                    <option value="civil_lines">Civil Lines</option>
-                    <option value="dhoomanganj">Dhoomanganj</option>
-                    <option value="station">Station</option>
-                </select>
-
+                    <select id="to" name="to" required>
+                        <option value="" disabled selected>To</option>
+                        <option value="jhalwa">Jhalwa</option>
+                        <option value="civil_lines">Civil Lines</option>
+                        <option value="dhoomanganj">Dhoomanganj</option>
+                        <option value="station">Station</option>
+                    </select>
+                </div>
                 <select id="status" name="status" required>
                     <option value="" disabled selected>Status</option>
                     <option value="all">All</option>
@@ -74,9 +85,10 @@
             </div>
 
             <ul id="results">
+                <!-- <li>Auto Details Here</li> -->
+                
             </ul>
         </div>
-
     </div>
 
 </body>

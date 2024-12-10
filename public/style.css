@@ -2,7 +2,6 @@
     --background: #ffffff;
     --text: #000000;
     --border: #d6d6d6;
-
 }
 
 * {
@@ -21,6 +20,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+form {
+    background-color: #ffffff;
 }
 
 .top-nav {
@@ -230,17 +233,21 @@ body {
     gap: 5%;
 }
 
+i {
+    color: green;
+    font-size: 11px;
+}
+
 .test-token {
     background-image: linear-gradient(125deg, #fbab34, #ffffff);
-
-    border-radius: 15px;
-    padding: 20px 20px;
+    border-radius: 10px;
+    padding: 15px 15px;
 }
 
 .test-token-top {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
 }
 
 
@@ -249,31 +256,28 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: 40px;
 }
 
 .test-token-top-right p {
     margin: 0px;
     font-weight: 500;
+    font-size: 13px;
 }
 
 .test-token-bottom p {
     margin-top: 10px;
     margin-bottom: 0px;
     font-weight: 300;
+    font-size: 14px;
 }
 
-.test-token-top-left {
-    background-color: red;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-}
 
 .test-token-top-left-img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
-    border: 1px solid black;
+    border: 1px solid green;
 }
 
 .route {
@@ -636,6 +640,30 @@ footer {
 
 /* Dashboard CSS */
 
+.bg-img {
+    width: 200px;
+    position: fixed;
+    bottom: -35px;
+    right: -60px;
+    z-index: -1;
+    animation: bg-slide 20s ease-in-out infinite;
+}
+
+/* Keyframes for left to right movement effect */
+@keyframes bg-slide {
+    0% {
+        transform: translateX(10vw);
+        /* Start off-screen to the left */
+    }
+
+    100% {
+        transform: translateX(-120vw);
+        /* Move off-screen to the right */
+    }
+}
+
+
+
 .dashboard-page {
     padding-top: 8vh;
     height: 100vh;
@@ -645,6 +673,35 @@ footer {
     align-items: center;
     flex-direction: column;
 }
+
+.dash-top {
+
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 0px 40px;
+}
+
+.dash-top-left {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 600;
+}
+
+.dash-top-right {
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+
+}
+
 
 .dashboard-form-main {
     border: 2px solid black;
@@ -656,13 +713,15 @@ footer {
     border-radius: 10px;
     gap: 2%;
     flex-wrap: wrap;
-    max-height: 90vh;
-}
+    max-height: 80vh;
+    background-color: #ffffff;
+    overflow: hidden;
+} 
 
 
 .dashboard-form {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     width: 100%;
@@ -687,6 +746,17 @@ footer {
     border-radius: 5px;
     border: 1px solid black;
     background-color: var(--background);
+}
+
+.try {
+    display: flex;
+    justify-content: center;
+    width: 48%;
+    gap: 4%;
+}
+
+.try select {
+    width: 48%;
 }
 
 .dashboard-form select:focus {
@@ -753,7 +823,6 @@ ul {
     justify-content: flex-start;
     align-items: center;
     overflow-y: auto;
-    max-height: 60vh;
     scroll-margin-top: 0;
     list-style-type: none;
 }
@@ -768,6 +837,15 @@ li {
     font-size: 14px;
     padding: 10px 10px;
     scroll-snap-align: start;
+
+}
+
+.li-item-overflow {
+    width: 100%;
+    display: flex;
+    overflow-y: auto;
+    max-height: 200px;
+
 }
 
 
@@ -790,7 +868,7 @@ li {
     }
 
     .mid-line-text {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .menu.show {
@@ -804,14 +882,37 @@ li {
     .login-auto-driver-form,
     .login-rider-form,
     .register-bt,
-    .dashboard-form {
+    .dashboard-form,
+    .dash-top {
         width: 80%;
     }
+
+    .bg-img {
+        width: 200px;
+        bottom: -35px;
+        right: -70px;
+        animation: bg-slide 15s ease-in-out infinite;
+    }
+
+    /* Keyframes for left to right movement effect */
+    @keyframes bg-slide {
+        0% {
+            transform: translateX(30vw);
+            /* Start off-screen to the left */
+        }
+
+        100% {
+            transform: translateX(-120vw);
+            /* Move off-screen to the right */
+        }
+    }
+
 
     .dashboard-form {
         flex-direction: column;
         width: 100%;
     }
+
 
     .dashboard-form select {
         width: 100%;
@@ -825,6 +926,11 @@ li {
 
     .dashboard-form-main {
         width: 80%;
+        max-height: 80vh;
     }
-}
 
+    .try {
+        width: 100%;
+    }
+
+}
